@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-import java.lang.Math;
+
 
 public class InvoiceProg {
 
@@ -8,6 +8,7 @@ public class InvoiceProg {
 		Scanner keyboard = new Scanner(System.in);
 		double taxRate, subTotal=0, taxTotal=0, tempPrice;
 		
+		//an array to hold the prices
 		double[] priceArray = new double [100];
 		
 		
@@ -20,6 +21,8 @@ public class InvoiceProg {
 		System.out
 				.println("Enter the list of prices. When finished, enter 0.0 ");
 
+		
+		//keep reading new prices until user quite
 		do {
 			System.out.print("Price # " + (i+1) + ": ");
 			tempPrice = keyboard.nextDouble();
@@ -32,6 +35,8 @@ public class InvoiceProg {
 		
 		keyboard.close();
 
+		
+		//print prices and total amounts 
 		System.out.println("\n\n\n--------------------------------------\n\n\nReceipt");
 		
 		for (j=0; j<=i; j++){
